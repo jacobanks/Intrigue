@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SignupViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Intrigue.xcodeproj">
    </FileRef>
    <FileRef
