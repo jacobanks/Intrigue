@@ -1,5 +1,5 @@
 //
-//  servicesTVC.swift
+//  messagesTVC.swift
 //  Intrigue
 //
 //  Created by Jacob Banks on 9/12/15.
@@ -8,18 +8,8 @@
 
 import UIKit
 
-class customTableViewCell: UITableViewCell {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var serviceImage: UIImageView!
+class messagesTVC: UITableViewController {
 
-}
-
-class servicesTVC: UITableViewController {
-
-    var array: NSArray = ["Uber", "Something"]
-    var descriptionArray: NSArray = ["hello", "Hi"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +18,7 @@ class servicesTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.title = "Services"
+        self.title = "Uber"
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,32 +29,26 @@ class servicesTVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return array.count
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as! customTableViewCell
-        // Configure the cell...
-        cell.titleLabel?.text = array[indexPath.row] as? String
-        cell.descriptionLabel?.text = descriptionArray[indexPath.row] as? String
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
-        cell.serviceImage.image = UIImage(named: "uber.png")
-        
+        // Configure the cell...
+
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let vc = messagesTVC()
-//        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
