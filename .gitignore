@@ -4,6 +4,7 @@
 # Visual Studio Code - https://code.visualstudio.com/
 .settings/
 
+Pods
 
 ### OSX ###
 .DS_Store
