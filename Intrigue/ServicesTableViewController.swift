@@ -41,7 +41,7 @@ class ServicesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return array.count
+        return 1
     }
 
     
@@ -49,22 +49,20 @@ class ServicesTableViewController: UITableViewController {
         var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as! customTableViewCell
         // Configure the cell...
         
-        cell.titleLabel?.text = array[indexPath.row] as? String
-        cell.descriptionLabel?.text = descriptionArray[indexPath.row] as? String
+        cell.titleLabel?.text = "Hi"
+//        cell.descriptionLabel?.text = descriptionArray[indexPath.row] as? String
 
-        if let url = NSURL(string: "\(iconURL!)") {
-            if let data = NSData(contentsOfURL: url){
-                cell.serviceImage.image = UIImage(data: data)
-            }
-        }
+//        if let url = NSURL(string: "\(iconURL!)") {
+//            if let data = NSData(contentsOfURL: url){
+//                cell.serviceImage.image = UIImage(data: data)
+//            }
+//        }
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = MessagesViewController()
-        self.presentViewController(vc, animated: true, completion: nil)
-//        let vc = messagesTVC()
-//        self.presentViewController(vc, animated: true, completion: nil)
+        self.navigationController!.pushViewController(vc, animated: true)
     }
     
     @IBAction func addService(sender: AnyObject) {
