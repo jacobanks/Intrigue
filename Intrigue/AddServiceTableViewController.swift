@@ -84,6 +84,8 @@ class AddServiceTableViewController: UITableViewController {
         
         if let url = NSURL(string: icon_url) {
             if let data = NSData(contentsOfURL: url){
+                cell.serviceImage.layer.cornerRadius = 10
+                cell.serviceImage.clipsToBounds = true
                 cell.serviceImage.image = UIImage(data: data)
             }
         }

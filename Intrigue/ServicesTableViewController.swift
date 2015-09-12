@@ -102,6 +102,8 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
             
             if let url = NSURL(string: (serviceInfoResult["icon_url"] as? String)!) {
                 if let data = NSData(contentsOfURL: url){
+                    cell.serviceImage.layer.cornerRadius = 10
+                    cell.serviceImage.clipsToBounds = true
                     cell.serviceImage.image = UIImage(data: data)
                 }
             }
