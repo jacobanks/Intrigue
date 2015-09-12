@@ -13,6 +13,7 @@
 		163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */; };
 		163CED9B1BA3DDF60060FAAB /* IntrigueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */; };
 		16B7C3D21BA3FF1000EC2A8F /* messagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */; };
+		16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D61BA4063900EC2A8F /* Message.swift */; };
 		16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23901BA3E13100B9A059 /* loginViewController.swift */; };
 		16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23921BA3E13E00B9A059 /* servicesTVC.swift */; };
 		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
@@ -42,6 +43,7 @@
 		163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrigueTests.swift; sourceTree = "<group>"; };
 		16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messagesViewController.swift; sourceTree = "<group>"; };
 		16B7C3D51BA4035A00EC2A8F /* Intrigue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intrigue-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		16B7C3D61BA4063900EC2A8F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		16CD23901BA3E13100B9A059 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = ../loginViewController.swift; sourceTree = "<group>"; };
 		16CD23921BA3E13E00B9A059 /* servicesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = servicesTVC.swift; path = ../servicesTVC.swift; sourceTree = "<group>"; };
 		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				16CD23901BA3E13100B9A059 /* loginViewController.swift */,
 				16CD23921BA3E13E00B9A059 /* servicesTVC.swift */,
 				16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */,
+				16B7C3D61BA4063900EC2A8F /* Message.swift */,
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
 				163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */,
@@ -286,6 +289,7 @@
 			files = (
 				16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */,
 				16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */,
+				16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */,
 				16B7C3D21BA3FF1000EC2A8F /* messagesViewController.swift in Sources */,
 				163CED851BA3DDF60060FAAB /* AppDelegate.swift in Sources */,
 			);
