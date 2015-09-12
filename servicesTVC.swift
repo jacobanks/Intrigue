@@ -17,7 +17,7 @@ class customTableViewCell: UITableViewCell {
 
 class servicesTVC: UITableViewController {
 
-    var array: NSArray = ["0", "1"]
+    var array: NSArray = ["Uber", "Something"]
     var descriptionArray: NSArray = ["hello", "Hi"]
     
     override func viewDidLoad() {
@@ -53,6 +53,8 @@ class servicesTVC: UITableViewController {
         // Configure the cell...
         cell.titleLabel?.text = array[indexPath.row] as? String
         cell.descriptionLabel?.text = descriptionArray[indexPath.row] as? String
+
+        cell.serviceImage.image = UIImage(named: "uber.png")
         
         return cell
     }

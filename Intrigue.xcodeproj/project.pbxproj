@@ -14,6 +14,7 @@
 		163CED9B1BA3DDF60060FAAB /* IntrigueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */; };
 		16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23901BA3E13100B9A059 /* loginViewController.swift */; };
 		16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23921BA3E13E00B9A059 /* servicesTVC.swift */; };
+		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrigueTests.swift; sourceTree = "<group>"; };
 		16CD23901BA3E13100B9A059 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = ../loginViewController.swift; sourceTree = "<group>"; };
 		16CD23921BA3E13E00B9A059 /* servicesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = servicesTVC.swift; path = ../servicesTVC.swift; sourceTree = "<group>"; };
+		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
 				163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */,
+				16CD23941BA3EC5D00B9A059 /* uber.png */,
 				163CED821BA3DDF60060FAAB /* Supporting Files */,
 			);
 			path = Intrigue;
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				163CED8A1BA3DDF60060FAAB /* Main.storyboard in Resources */,
+				16CD23951BA3EC5D00B9A059 /* uber.png in Resources */,
 				163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */,
 				163CED8C1BA3DDF60060FAAB /* Images.xcassets in Resources */,
 			);
