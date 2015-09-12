@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="HJr-18-Zd5">
             <objects>
-                <viewController id="J16-gf-RSL" customClass="ViewController" customModule="Intrigue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J16-gf-RSL" customClass="loginViewController" customModule="Intrigue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hyJ-1l-c7X"/>
                         <viewControllerLayoutGuide type="bottom" id="IX4-dG-650"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="779.5" y="88.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ServicesTVC-->
         <scene sceneID="S1j-F4-9lS">
             <objects>
-                <tableViewController id="bpQ-Fp-oCk" sceneMemberID="viewController">
+                <tableViewController id="bpQ-Fp-oCk" customClass="servicesTVC" customModule="Intrigue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dls-rP-IQw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

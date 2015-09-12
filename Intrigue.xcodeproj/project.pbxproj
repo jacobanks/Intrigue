@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		163CED851BA3DDF60060FAAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED841BA3DDF60060FAAB /* AppDelegate.swift */; };
-		163CED871BA3DDF60060FAAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED861BA3DDF60060FAAB /* ViewController.swift */; };
 		163CED8A1BA3DDF60060FAAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163CED881BA3DDF60060FAAB /* Main.storyboard */; };
 		163CED8C1BA3DDF60060FAAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8B1BA3DDF60060FAAB /* Images.xcassets */; };
 		163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */; };
 		163CED9B1BA3DDF60060FAAB /* IntrigueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */; };
+		16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23901BA3E13100B9A059 /* loginViewController.swift */; };
+		16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23921BA3E13E00B9A059 /* servicesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		163CED7F1BA3DDF60060FAAB /* Intrigue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intrigue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CED831BA3DDF60060FAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163CED841BA3DDF60060FAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		163CED861BA3DDF60060FAAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		163CED891BA3DDF60060FAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		163CED8B1BA3DDF60060FAAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		163CED8E1BA3DDF60060FAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		163CED941BA3DDF60060FAAB /* IntrigueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntrigueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CED991BA3DDF60060FAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrigueTests.swift; sourceTree = "<group>"; };
+		16CD23901BA3E13100B9A059 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = ../loginViewController.swift; sourceTree = "<group>"; };
+		16CD23921BA3E13E00B9A059 /* servicesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = servicesTVC.swift; path = ../servicesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				163CED841BA3DDF60060FAAB /* AppDelegate.swift */,
-				163CED861BA3DDF60060FAAB /* ViewController.swift */,
+				16CD23901BA3E13100B9A059 /* loginViewController.swift */,
+				16CD23921BA3E13E00B9A059 /* servicesTVC.swift */,
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
 				163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */,
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163CED871BA3DDF60060FAAB /* ViewController.swift in Sources */,
+				16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */,
+				16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */,
 				163CED851BA3DDF60060FAAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				163CEDA01BA3DDF60060FAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		163CEDA11BA3DDF60060FAAB /* Build configuration list for PBXNativeTarget "IntrigueTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				163CEDA31BA3DDF60060FAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
