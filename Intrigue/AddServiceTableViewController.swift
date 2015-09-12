@@ -79,7 +79,10 @@ class AddServiceTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.navigationController?.popViewControllerAnimated(true)
+        //self.navigationController?.popViewControllerAnimated(true)
+        let vc = MessagesViewController()
+        self.presentViewController(vc, animated: true, completion: nil)
+
     }
 
     /*

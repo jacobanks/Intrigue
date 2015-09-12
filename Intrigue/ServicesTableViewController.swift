@@ -61,6 +61,8 @@ class ServicesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = MessagesViewController()
+        self.presentViewController(vc, animated: true, completion: nil)
 //        let vc = messagesTVC()
 //        self.presentViewController(vc, animated: true, completion: nil)
     }
