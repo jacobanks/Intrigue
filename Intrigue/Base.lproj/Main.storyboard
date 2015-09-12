@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="JpI-hc-QTn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="70" id="JpI-hc-QTn" customClass="customTableViewCell" customModule="Intrigue" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JpI-hc-QTn" id="XE1-fV-qyU">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -99,6 +99,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="aBO-Jp-D1x" id="fk8-2V-7JR"/>
+                                    <outlet property="serviceImage" destination="hhu-3m-tur" id="2f0-fa-uT7"/>
+                                    <outlet property="titleLabel" destination="qTV-Xp-BUx" id="fVf-V5-h7N"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
