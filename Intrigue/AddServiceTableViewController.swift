@@ -27,7 +27,6 @@ class AddServiceTableViewController: UITableViewController {
         var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
         
         NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-            //            println(NSString(data: data, encoding: NSUTF8StringEncoding)!)
             var serviceInfoResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
             
             serviceList = serviceInfoResult
@@ -37,7 +36,6 @@ class AddServiceTableViewController: UITableViewController {
             var request2: NSMutableURLRequest = NSMutableURLRequest(URL: url2)
             
             NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-                //            println(NSString(data: data, encoding: NSUTF8StringEncoding)!)
                 var chatListResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
                 
                 chatList = chatListResult
@@ -130,10 +128,7 @@ class AddServiceTableViewController: UITableViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var err: NSError
             
-            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
-            
             var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-            println("\(jsonResult)")
         })
     }
 
