@@ -12,6 +12,7 @@
 		163CED8C1BA3DDF60060FAAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8B1BA3DDF60060FAAB /* Images.xcassets */; };
 		163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */; };
 		16B4B0B21BA4229F004417C0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4B0B11BA4229F004417C0 /* SignupViewController.swift */; };
+		16B4B0B61BA44487004417C0 /* AddServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */; };
 		16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D61BA4063900EC2A8F /* Message.swift */; };
 		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
 		34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0E3D47408BA64771979E9C /* libPods.a */; };
@@ -31,6 +32,7 @@
 		163CED991BA3DDF60060FAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrigueTests.swift; sourceTree = "<group>"; };
 		16B4B0B11BA4229F004417C0 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableViewController.swift; sourceTree = "<group>"; };
 		16B7C3D61BA4063900EC2A8F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
 		7D0E3D47408BA64771979E9C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 				ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */,
 				ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */,
 				ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */,
+				16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */,
 				16B7C3D61BA4063900EC2A8F /* Message.swift */,
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B4B0B61BA44487004417C0 /* AddServiceTableViewController.swift in Sources */,
 				16B4B0B21BA4229F004417C0 /* SignupViewController.swift in Sources */,
 				ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */,
 				16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */,
