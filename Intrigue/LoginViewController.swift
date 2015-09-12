@@ -25,6 +25,12 @@ class LoginViewController: UIViewController {
         self.signInButton.layer.borderColor = UIColor.whiteColor().CGColor
 
         // Do any additional setup after loading the view.
+        if(NSUserDefaults.standardUserDefaults().stringForKey("authToken") != nil) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("serviceTable") as! UIViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+            return;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +66,13 @@ class LoginViewController: UIViewController {
                 var alert = UIAlertController(title: "Alert", message: "Your email or password is incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                NSUserDefaults.standardUserDefaults().setValue(jsonResult.objectForKey("token") as! String, forKey: "authToken")
+                dispatch_async(dispatch_get_main_queue()) {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewControllerWithIdentifier("serviceTable") as! UIViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
             
             println("AsSynchronous\(jsonResult)")

@@ -15,16 +15,24 @@ class customCell: UITableViewCell {
     
 }
 
+var serviceList = []
+
 class AddServiceTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/services")!
+        var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
+        
+        NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            //            println(NSString(data: data, encoding: NSUTF8StringEncoding)!)
+            var serviceInfoResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
+            
+            serviceList = serviceInfoResult
+            self.tableView.reloadData()
+        }
+        
         self.title = "Add a Service"
     }
     
@@ -48,38 +56,35 @@ class AddServiceTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 2
+        return serviceList.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:customCell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as! customCell
         // Configure the cell...
-        var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/services")!
-        var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
+        let titleString = serviceList[indexPath.row]["name"]
+        let descriptionString = serviceList[indexPath.row]["description"]
+        let icon_url = serviceList[indexPath.row]["icon_url"] as! String
         
-        NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-//            println(NSString(data: data, encoding: NSUTF8StringEncoding)!)
-            var serviceInfoResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
-            
-            let titleString = serviceInfoResult[indexPath.row]["name"]
-            let descriptionString = serviceInfoResult[indexPath.row]["description"]
-            let icon_url = serviceInfoResult[indexPath.row]["icon_url"] as! String
-
-            cell.titleLabel.text = titleString as? String
-            cell.descriptionLabel.text = descriptionString as? String
-
-            if let url = NSURL(string: icon_url) {
-                if let data = NSData(contentsOfURL: url){
-                    cell.serviceImage.image = UIImage(data: data)
-                }
+        cell.titleLabel.text = titleString as? String
+        cell.descriptionLabel.text = descriptionString as? String
+        
+        if let url = NSURL(string: icon_url) {
+            if let data = NSData(contentsOfURL: url){
+                cell.serviceImage.image = UIImage(data: data)
             }
         }
+
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.navigationController?.popViewControllerAnimated(true)
+        
+        let vc = MessagesViewController()
+        vc.serviceID = serviceList[indexPath.row]["id"] as! Int
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     /*
