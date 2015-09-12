@@ -178,16 +178,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRQ-ld-cm1">
-                                <rect key="frame" x="168" y="291" width="38" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="MEB-Xh-tOI" eventType="touchUpInside" id="k5i-LF-RW3"/>
-                                    <segue destination="g0J-Xe-0PT" kind="show" id="lDV-J9-CV3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzy-Nx-pcw">
                                 <rect key="frame" x="123" y="367" width="128" height="30"/>
                                 <state key="normal" title="Create an Account">
@@ -195,6 +185,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="J16-gf-RSL" kind="show" id="BvW-p0-fUD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRQ-ld-cm1">
+                                <rect key="frame" x="161" y="290" width="52" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="MEB-Xh-tOI" eventType="touchUpInside" id="k5i-LF-RW3"/>
+                                    <segue destination="g0J-Xe-0PT" kind="show" id="lDV-J9-CV3"/>
                                 </connections>
                             </button>
                         </subviews>

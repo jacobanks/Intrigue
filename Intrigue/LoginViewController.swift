@@ -41,9 +41,19 @@ class LoginViewController: UIViewController {
         let queue: NSOperationQueue = NSOperationQueue()
         
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var err: NSError
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
-            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            var err: NSError?
+//            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+            
+            var success: AnyObject? = jsonResult.objectForKey("success")
+            if (err != nil || success?.stringValue == "0") {
+                
+                var alert = UIAlertController(title: "Alert", message: "Your email or password is incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            
             println("AsSynchronous\(jsonResult)")
         })
     }
