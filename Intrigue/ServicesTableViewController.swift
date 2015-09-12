@@ -91,6 +91,7 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
     
     @IBAction func addService(sender: AnyObject) {
     
+        //Create a Chat
         let urlPath: String = "https://mhacks.on-aptible.com/api/chat"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
@@ -116,8 +117,7 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
         })
 
         
-        //https://mhacks.on-aptible.com/api/service?service_id=1
-        
+        //GET service info
         var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/service?service_id=1")!
         var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
         

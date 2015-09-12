@@ -18,7 +18,7 @@ class customCell: UITableViewCell {
 var serviceList = []
 
 class AddServiceTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,6 +85,32 @@ class AddServiceTableViewController: UITableViewController {
         let vc = MessagesViewController()
         vc.serviceID = serviceList[indexPath.row]["id"] as! Int
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        //Create a Chat
+        let urlPath: String = "https://mhacks.on-aptible.com/api/chat"
+        var url: NSURL = NSURL(string: urlPath)!
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = "POST"
+        let token: NSString = NSUserDefaults.standardUserDefaults().stringForKey("authToken")!
+        var stringPost = "token=\(token)&service_id=\(vc.serviceID)"
+        
+        let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        request.timeoutInterval = 60
+        request.HTTPBody = data
+        request.HTTPShouldHandleCookies = false
+        
+        let queue: NSOperationQueue = NSOperationQueue()
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var err: NSError
+            
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            println("\(jsonResult)")
+        })
     }
 
     /*
