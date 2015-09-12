@@ -16,6 +16,7 @@ class customCell: UITableViewCell {
 }
 
 var serviceList = []
+var chatList = []
 
 class AddServiceTableViewController: UITableViewController {
     
@@ -30,7 +31,18 @@ class AddServiceTableViewController: UITableViewController {
             var serviceInfoResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
             
             serviceList = serviceInfoResult
-            self.tableView.reloadData()
+            
+            let token: NSString = NSUserDefaults.standardUserDefaults().stringForKey("authToken")!
+            var url2: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/chats?token=\(token)")!
+            var request2: NSMutableURLRequest = NSMutableURLRequest(URL: url2)
+            
+            NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+                //            println(NSString(data: data, encoding: NSUTF8StringEncoding)!)
+                var chatListResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
+                
+                chatList = chatListResult
+                self.tableView.reloadData()
+            }
         }
         
         self.title = "Add a Service"
@@ -88,6 +100,16 @@ class AddServiceTableViewController: UITableViewController {
         vc.serviceID = serviceList[indexPath.row]["id"] as! Int
         self.navigationController?.pushViewController(vc, animated: true)
         
+//        var amountOfDupes = 0;
+//        for obj in chatList {
+//            if((serviceList[indexPath.row]["id"] as! Int) == (obj["id"] as! Int)) {
+//                amountOfDupes++;
+//                if(amountOfDupes > 1) {
+//                    return;
+//                }
+//            }
+//        }
+        
         //Create a Chat
         let urlPath: String = "https://mhacks.on-aptible.com/api/chat"
         var url: NSURL = NSURL(string: urlPath)!
@@ -108,7 +130,7 @@ class AddServiceTableViewController: UITableViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var err: NSError
             
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
             
             var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
             println("\(jsonResult)")
