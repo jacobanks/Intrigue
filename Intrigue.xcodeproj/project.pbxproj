@@ -11,24 +11,13 @@
 		163CED8A1BA3DDF60060FAAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163CED881BA3DDF60060FAAB /* Main.storyboard */; };
 		163CED8C1BA3DDF60060FAAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8B1BA3DDF60060FAAB /* Images.xcassets */; };
 		163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */; };
-		163CED9B1BA3DDF60060FAAB /* IntrigueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */; };
-		16B7C3D21BA3FF1000EC2A8F /* messagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */; };
 		16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D61BA4063900EC2A8F /* Message.swift */; };
-		16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23901BA3E13100B9A059 /* loginViewController.swift */; };
-		16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CD23921BA3E13E00B9A059 /* servicesTVC.swift */; };
 		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
 		34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0E3D47408BA64771979E9C /* libPods.a */; };
+		ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */; };
+		ABF35DFB1BA410A00029B9C2 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */; };
+		ABF35DFD1BA410B20029B9C2 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		163CED951BA3DDF60060FAAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 163CED771BA3DDF60060FAAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 163CED7E1BA3DDF60060FAAB;
-			remoteInfo = Intrigue;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		061F1A9AC7E541629113AAFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -38,16 +27,15 @@
 		163CED891BA3DDF60060FAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		163CED8B1BA3DDF60060FAAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		163CED8E1BA3DDF60060FAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		163CED941BA3DDF60060FAAB /* IntrigueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntrigueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CED991BA3DDF60060FAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163CED9A1BA3DDF60060FAAB /* IntrigueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrigueTests.swift; sourceTree = "<group>"; };
-		16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messagesViewController.swift; sourceTree = "<group>"; };
-		16B7C3D51BA4035A00EC2A8F /* Intrigue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intrigue-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		16B7C3D61BA4063900EC2A8F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		16CD23901BA3E13100B9A059 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = ../loginViewController.swift; sourceTree = "<group>"; };
-		16CD23921BA3E13E00B9A059 /* servicesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = servicesTVC.swift; path = ../servicesTVC.swift; sourceTree = "<group>"; };
 		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
 		7D0E3D47408BA64771979E9C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
+		ABF35DFE1BA413B30029B9C2 /* Intrigue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intrigue-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7B645A5B6C7F964287BF38D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,13 +45,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		163CED911BA3DDF60060FAAB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				163CED7F1BA3DDF60060FAAB /* Intrigue.app */,
-				163CED941BA3DDF60060FAAB /* IntrigueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,15 +74,14 @@
 			isa = PBXGroup;
 			children = (
 				163CED841BA3DDF60060FAAB /* AppDelegate.swift */,
-				16CD23901BA3E13100B9A059 /* loginViewController.swift */,
-				16CD23921BA3E13E00B9A059 /* servicesTVC.swift */,
-				16B7C3D11BA3FF1000EC2A8F /* messagesViewController.swift */,
+				ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */,
+				ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */,
+				ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */,
 				16B7C3D61BA4063900EC2A8F /* Message.swift */,
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
 				163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */,
-				16B7C3D51BA4035A00EC2A8F /* Intrigue-Bridging-Header.h */,
-				16CD23941BA3EC5D00B9A059 /* uber.png */,
+				ABF35DFE1BA413B30029B9C2 /* Intrigue-Bridging-Header.h */,
 				163CED821BA3DDF60060FAAB /* Supporting Files */,
 			);
 			path = Intrigue;
@@ -111,6 +90,7 @@
 		163CED821BA3DDF60060FAAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16CD23941BA3EC5D00B9A059 /* uber.png */,
 				163CED831BA3DDF60060FAAB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -172,24 +152,6 @@
 			productReference = 163CED7F1BA3DDF60060FAAB /* Intrigue.app */;
 			productType = "com.apple.product-type.application";
 		};
-		163CED931BA3DDF60060FAAB /* IntrigueTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 163CEDA11BA3DDF60060FAAB /* Build configuration list for PBXNativeTarget "IntrigueTests" */;
-			buildPhases = (
-				163CED901BA3DDF60060FAAB /* Sources */,
-				163CED911BA3DDF60060FAAB /* Frameworks */,
-				163CED921BA3DDF60060FAAB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				163CED961BA3DDF60060FAAB /* PBXTargetDependency */,
-			);
-			name = IntrigueTests;
-			productName = IntrigueTests;
-			productReference = 163CED941BA3DDF60060FAAB /* IntrigueTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,10 +164,6 @@
 				TargetAttributes = {
 					163CED7E1BA3DDF60060FAAB = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					163CED931BA3DDF60060FAAB = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 163CED7E1BA3DDF60060FAAB;
 					};
 				};
 			};
@@ -223,7 +181,6 @@
 			projectRoot = "";
 			targets = (
 				163CED7E1BA3DDF60060FAAB /* Intrigue */,
-				163CED931BA3DDF60060FAAB /* IntrigueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +194,6 @@
 				16CD23951BA3EC5D00B9A059 /* uber.png in Resources */,
 				163CED8F1BA3DDF60060FAAB /* LaunchScreen.xib in Resources */,
 				163CED8C1BA3DDF60060FAAB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		163CED921BA3DDF60060FAAB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,31 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16CD23931BA3E13E00B9A059 /* servicesTVC.swift in Sources */,
-				16CD23911BA3E13100B9A059 /* loginViewController.swift in Sources */,
+				ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */,
 				16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */,
-				16B7C3D21BA3FF1000EC2A8F /* messagesViewController.swift in Sources */,
+				ABF35DFB1BA410A00029B9C2 /* MessagesViewController.swift in Sources */,
 				163CED851BA3DDF60060FAAB /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		163CED901BA3DDF60060FAAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				163CED9B1BA3DDF60060FAAB /* IntrigueTests.swift in Sources */,
+				ABF35DFD1BA410B20029B9C2 /* ServicesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		163CED961BA3DDF60060FAAB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 163CED7E1BA3DDF60060FAAB /* Intrigue */;
-			targetProxy = 163CED951BA3DDF60060FAAB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		163CED881BA3DDF60060FAAB /* Main.storyboard */ = {
@@ -373,7 +307,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "Intrigue-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -411,6 +346,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -423,6 +359,8 @@
 				INFOPLIST_FILE = Intrigue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Intrigue-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -434,40 +372,6 @@
 				INFOPLIST_FILE = Intrigue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		163CEDA21BA3DDF60060FAAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IntrigueTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Intrigue.app/Intrigue";
-			};
-			name = Debug;
-		};
-		163CEDA31BA3DDF60060FAAB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IntrigueTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Intrigue.app/Intrigue";
 			};
 			name = Release;
 		};
@@ -488,15 +392,6 @@
 			buildConfigurations = (
 				163CED9F1BA3DDF60060FAAB /* Debug */,
 				163CEDA01BA3DDF60060FAAB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		163CEDA11BA3DDF60060FAAB /* Build configuration list for PBXNativeTarget "IntrigueTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				163CEDA21BA3DDF60060FAAB /* Debug */,
-				163CEDA31BA3DDF60060FAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

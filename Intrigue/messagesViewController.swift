@@ -8,7 +8,7 @@
 
 import UIKit
 
-class messagesViewController: JSQMessagesViewController {
+class MessagesViewController: JSQMessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
