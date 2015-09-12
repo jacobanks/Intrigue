@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(sender: AnyObject) {
-        let urlPath: String = "https://mhacks.on-aptible.com/api/auth/token"
+        let urlPath: String = "https://servis.on-aptible.com/auth/token"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         
@@ -56,9 +56,11 @@ class LoginViewController: UIViewController {
         
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var err: NSError?
-//            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
 
             var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+            
+            println(jsonResult)
             
             var success: AnyObject? = jsonResult.objectForKey("success")
             if (err != nil || success?.stringValue == "0") {

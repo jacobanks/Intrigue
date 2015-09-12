@@ -26,12 +26,13 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createUser(sender: AnyObject) {
-        let urlPath: String = "https://mhacks.on-aptible.com/api/auth/register"
+        //https://mhacks.on-aptible.com/api/auth/register
+        let urlPath: String = "https://servis.on-aptible.com/auth/register"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         
         request.HTTPMethod = "POST"
-        var stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)&name=\(nameTextField!.text)"
+        var stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)"
         
         let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
         
