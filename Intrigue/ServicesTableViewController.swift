@@ -65,7 +65,7 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 0
+        return 3
     }
 
     
@@ -73,14 +73,32 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
         var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as! customTableViewCell
         // Configure the cell...
         
-        cell.titleLabel?.text = "Hi"
-//        cell.descriptionLabel?.text = descriptionArray[indexPath.row] as? String
+        let token: NSString = NSUserDefaults.standardUserDefaults().stringForKey("authToken")!
+        var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/chats?token=\(token)")!
+        var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
+        
+        NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
+            var serviceListResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
 
-//        if let url = NSURL(string: "\(iconURL!)") {
-//            if let data = NSData(contentsOfURL: url){
-//                cell.serviceImage.image = UIImage(data: data)
-//            }
-//        }
+            var serviceID = serviceListResult[indexPath.row]["service_id"] as! Int
+            
+            var url: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/service?service_id=\(serviceID)")!
+            var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+            
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data2, error) in
+                var serviceInfoResult: NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(data2, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSMutableDictionary
+                                
+                cell.titleLabel?.text = serviceInfoResult["name"] as? String
+                cell.descriptionLabel?.text = serviceInfoResult["description"] as? String
+                
+                if let url = NSURL(string: (serviceInfoResult["icon_url"] as? String)!) {
+                    if let data = NSData(contentsOfURL: url){
+                        cell.serviceImage.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
         return cell
     }
     
