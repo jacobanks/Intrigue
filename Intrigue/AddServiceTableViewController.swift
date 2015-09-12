@@ -34,6 +34,8 @@ class AddServiceTableViewController: UITableViewController {
         }
         
         self.title = "Add a Service"
+        
+        self.tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(animated: Bool) {

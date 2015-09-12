@@ -87,7 +87,7 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data2, error) in
                 var serviceInfoResult: NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(data2, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSMutableDictionary
-                                
+                
                 cell.titleLabel?.text = serviceInfoResult["name"] as? String
                 cell.descriptionLabel?.text = serviceInfoResult["description"] as? String
                 
