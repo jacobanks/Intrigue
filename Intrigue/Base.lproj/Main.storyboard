@@ -114,7 +114,6 @@
                                     <outlet property="descriptionLabel" destination="aBO-Jp-D1x" id="fk8-2V-7JR"/>
                                     <outlet property="serviceImage" destination="hhu-3m-tur" id="2f0-fa-uT7"/>
                                     <outlet property="titleLabel" destination="qTV-Xp-BUx" id="fVf-V5-h7N"/>
-                                    <segue destination="75u-CX-ghx" kind="show" id="XGX-de-EkZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -125,7 +124,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hHL-uO-gyB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1CW-SR-xS8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1CW-SR-xS8">
+                            <connections>
+                                <action selector="addService:" destination="bpQ-Fp-oCk" id="lmK-71-HnI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3h-EB-B8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,14 +144,14 @@
                         <viewControllerLayoutGuide type="bottom" id="8Il-8H-il9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3be-vk-XIH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyB-yV-3xQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709.5" y="88.5"/>
+            <point key="canvasLocation" x="1853" y="89"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gb6-kt-53p">
