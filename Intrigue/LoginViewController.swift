@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var nameTextField: UITextField?
+    @IBOutlet var emailTextField: UITextField?
+    @IBOutlet var passwordTextField: UITextField?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,28 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func createUser(sender: AnyObject) {
+        let urlPath: String = "https://mhacks.on-aptible.com/api/auth/register"
+        var url: NSURL = NSURL(string: urlPath)!
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = "POST"
+        var stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)&name=\(nameTextField!.text)"
+        
+        let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        request.timeoutInterval = 60
+        request.HTTPBody = data
+        request.HTTPShouldHandleCookies = false
+        
+        let queue: NSOperationQueue = NSOperationQueue()
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var err: NSError
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            println("AsSynchronous\(jsonResult)")
+        })
+    }
 
     /*
     // MARK: - Navigation
