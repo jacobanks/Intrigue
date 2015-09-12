@@ -15,7 +15,7 @@ class customTableViewCell: UITableViewCell {
 
 }
 
-class ServicesTableViewController: UITableViewController {
+class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     var array: [NSString] = []
     var descriptionArray: [NSString] = []
@@ -25,6 +25,30 @@ class ServicesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.title = "Services"
+        
+        self.tableView.emptyDataSetSource = self
+        self.tableView.emptyDataSetDelegate = self
+        
+        // A little trick for removing the cell separators
+        self.tableView.tableFooterView = UIView()
+    }
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "Start chatting to a service!"
+        let attributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(18.0), NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+        
+        return NSAttributedString(string: text, attributes: attributes)
+    }
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let text = "It looks like you haven't been talking to anyone. Don't stay lonely, start a conversation!"
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        paragraph.alignment = NSTextAlignment.Center
+        
+        let attributes = [NSFontAttributeName: UIFont.systemFontOfSize(14.0), NSForegroundColorAttributeName: UIColor.lightGrayColor(), NSParagraphStyleAttributeName: paragraph]
+        
+        return NSAttributedString(string: text, attributes: attributes)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +65,7 @@ class ServicesTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 1
+        return 0
     }
 
     
