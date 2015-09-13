@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
         RequestHandler().sendRequest(urlPath, data: stringPost, postOrGet: false, completionHandler: { err, data in
             var jsonResult: NSDictionary = data as! NSDictionary
             
+            println(jsonResult)
+            
             var success: AnyObject? = jsonResult.objectForKey("success")
             if (err) {
                 var alert = UIAlertController(title: "Alert", message: "Your email or password is incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
