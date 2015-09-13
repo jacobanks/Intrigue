@@ -11,7 +11,7 @@ import Foundation
 class RequestHandler: NSObject {
     func sendRequest(url: NSString, data: NSString?, postOrGet: Boolean, completionHandler: (Bool, AnyObject) -> ()) {
         
-        let urlPath: String = "https://servis.on-aptible.com"
+        let urlPath: String = "https://api.servisapp.com"
         var url: NSURL = NSURL(string: "\(urlPath)\(url)")!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         
@@ -30,7 +30,11 @@ class RequestHandler: NSObject {
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var err: NSError
             
-            completionHandler(false, NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)!)
+            if(data == nil) {
+                completionHandler(true, error)
+            } else {
+                completionHandler(false, NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil)!)
+            }
         })
     }
 }

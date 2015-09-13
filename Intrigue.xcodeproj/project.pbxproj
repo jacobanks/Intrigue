@@ -15,17 +15,17 @@
 		16B4B0B61BA44487004417C0 /* AddServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */; };
 		16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D61BA4063900EC2A8F /* Message.swift */; };
 		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
-		34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0E3D47408BA64771979E9C /* libPods.a */; };
 		AB0B2CA71BA4D26300AB7BAF /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B2CA61BA4D26300AB7BAF /* RequestHandler.swift */; };
 		AB0B2CAB1BA4D93800AB7BAF /* Boolean+Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B2CAA1BA4D93800AB7BAF /* Boolean+Boolean.swift */; };
 		ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */; };
 		ABF35DFB1BA410A00029B9C2 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */; };
 		ABF35DFD1BA410B20029B9C2 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */; };
+		E770D88DE1CE759D83697D03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB7CF08E7809A9A04ECDD57 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		061F1A9AC7E541629113AAFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		163CED7F1BA3DDF60060FAAB /* Intrigue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intrigue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		163CED7F1BA3DDF60060FAAB /* Servis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Servis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		163CED831BA3DDF60060FAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163CED841BA3DDF60060FAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		163CED891BA3DDF60060FAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,13 +37,13 @@
 		16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceTableViewController.swift; sourceTree = "<group>"; };
 		16B7C3D61BA4063900EC2A8F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
-		7D0E3D47408BA64771979E9C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0B2CA61BA4D26300AB7BAF /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		AB0B2CAA1BA4D93800AB7BAF /* Boolean+Boolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Boolean+Boolean.swift"; sourceTree = "<group>"; };
 		ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		ABF35DFE1BA413B30029B9C2 /* Intrigue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Intrigue-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFB7CF08E7809A9A04ECDD57 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B645A5B6C7F964287BF38D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */,
+				E770D88DE1CE759D83697D03 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		163CED801BA3DDF60060FAAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				163CED7F1BA3DDF60060FAAB /* Intrigue.app */,
+				163CED7F1BA3DDF60060FAAB /* Servis.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 		2A52BF7CA808F526B55AD7F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D0E3D47408BA64771979E9C /* libPods.a */,
+				CFB7CF08E7809A9A04ECDD57 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +170,7 @@
 				163CED7C1BA3DDF60060FAAB /* Frameworks */,
 				163CED7D1BA3DDF60060FAAB /* Resources */,
 				25BE7C9DAF8BA783B88DD24D /* Copy Pods Resources */,
+				FF1B545E66CE674599541E30 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,7 +178,7 @@
 			);
 			name = Intrigue;
 			productName = Intrigue;
-			productReference = 163CED7F1BA3DDF60060FAAB /* Intrigue.app */;
+			productReference = 163CED7F1BA3DDF60060FAAB /* Servis.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -256,6 +257,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF1B545E66CE674599541E30 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -390,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Intrigue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Servis;
 				SWIFT_OBJC_BRIDGING_HEADER = "Intrigue-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 			};
@@ -403,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Intrigue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Servis;
 			};
 			name = Release;
 		};

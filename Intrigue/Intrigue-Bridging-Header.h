@@ -6,6 +6,5 @@
 //  Copyright (c) 2015 Jacob Banks. All rights reserved.
 //
 
-#import "JSQMessages.h"
-#import "JSQMessageData.h"
-#import "UIScrollView+EmptyDataSet.h"
+@import JSQMessagesViewController;
+@import DZNEmptyDataSet;

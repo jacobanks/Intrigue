@@ -34,6 +34,7 @@ class SignupViewController: UIViewController {
                 let urlPath2: String = "/auth/token"
                 
                 RequestHandler().sendRequest(urlPath2, data: stringPost, postOrGet: false, completionHandler: { err, data in
+                    
                     var jsonResult: NSDictionary = data as! NSDictionary
                     
                     var success: AnyObject? = jsonResult.objectForKey("success")
