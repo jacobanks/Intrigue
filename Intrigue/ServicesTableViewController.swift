@@ -36,17 +36,14 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
     
     override func viewWillAppear(animated: Bool) {
         let token: NSString = NSUserDefaults.standardUserDefaults().stringForKey("authToken")!
-        var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/chats?token=\(token)")!
-        var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
+        let url: NSString = "/chats?token=\(token)"
         
-        NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-            var serviceListResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
-            
-            
+        RequestHandler().sendRequest(url, data: nil, postOrGet: false, completionHandler: { err, data in
+            let serviceListResult: NSArray = data as! NSArray
             
             self.serviceList = serviceListResult
             self.tableView.reloadData()
-        }
+        })
     }
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -89,13 +86,11 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
         var cell:customTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as! customTableViewCell
         // Configure the cell...
         
-        var serviceID = serviceList[indexPath.row]["service_id"] as! Int
+        let serviceID = serviceList[indexPath.row]["service_id"] as! Int
+        let url: NSString = "/service?service_id=\(serviceID)"
         
-        var url: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/service?service_id=\(serviceID)")!
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data2, error) in
-            var serviceInfoResult: NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(data2, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSMutableDictionary
+        RequestHandler().sendRequest(url, data: nil, postOrGet: false, completionHandler: { err, data in
+            var serviceInfoResult: NSDictionary = data as! NSDictionary
             
             cell.titleLabel?.text = serviceInfoResult["name"] as? String
             cell.descriptionLabel?.text = serviceInfoResult["description"] as? String
@@ -107,7 +102,7 @@ class ServicesTableViewController: UITableViewController, DZNEmptyDataSetSource,
                     cell.serviceImage.image = UIImage(data: data)
                 }
             }
-        }
+        })
         
         return cell
     }

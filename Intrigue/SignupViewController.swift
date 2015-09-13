@@ -26,24 +26,31 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func createUser(sender: AnyObject) {
-        let urlPath: String = "https://mhacks.on-aptible.com/api/auth/register"
-        var url: NSURL = NSURL(string: urlPath)!
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let urlPath: String = "/auth/register"
+        let stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)"
         
-        request.HTTPMethod = "POST"
-        var stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)&name=\(nameTextField!.text)"
-        
-        let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        request.timeoutInterval = 60
-        request.HTTPBody = data
-        request.HTTPShouldHandleCookies = false
-        
-        let queue: NSOperationQueue = NSOperationQueue()
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var err: NSError
-            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        RequestHandler().sendRequest(urlPath, data: stringPost, postOrGet: true, completionHandler: { err, data in
+            if(!err) {
+                let urlPath2: String = "/auth/token"
+                
+                RequestHandler().sendRequest(urlPath2, data: stringPost, postOrGet: false, completionHandler: { err, data in
+                    var jsonResult: NSDictionary = data as! NSDictionary
+                    
+                    var success: AnyObject? = jsonResult.objectForKey("success")
+                    if (err) {
+                        var alert = UIAlertController(title: "Alert", message: "Your email or password is incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    } else {
+                        NSUserDefaults.standardUserDefaults().setValue(jsonResult.objectForKey("token") as! String, forKey: "authToken")
+                        dispatch_async(dispatch_get_main_queue()) {
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewControllerWithIdentifier("serviceTable") as! UIViewController
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                    }
+                })
+            }
         })
     }
     

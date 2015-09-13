@@ -16,6 +16,8 @@
 		16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7C3D61BA4063900EC2A8F /* Message.swift */; };
 		16CD23951BA3EC5D00B9A059 /* uber.png in Resources */ = {isa = PBXBuildFile; fileRef = 16CD23941BA3EC5D00B9A059 /* uber.png */; };
 		34404C5C4C05C8FDEE5956A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0E3D47408BA64771979E9C /* libPods.a */; };
+		AB0B2CA71BA4D26300AB7BAF /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B2CA61BA4D26300AB7BAF /* RequestHandler.swift */; };
+		AB0B2CAB1BA4D93800AB7BAF /* Boolean+Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B2CAA1BA4D93800AB7BAF /* Boolean+Boolean.swift */; };
 		ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */; };
 		ABF35DFB1BA410A00029B9C2 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */; };
 		ABF35DFD1BA410B20029B9C2 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */; };
@@ -36,6 +38,8 @@
 		16B7C3D61BA4063900EC2A8F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		16CD23941BA3EC5D00B9A059 /* uber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uber.png; sourceTree = "<group>"; };
 		7D0E3D47408BA64771979E9C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0B2CA61BA4D26300AB7BAF /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		AB0B2CAA1BA4D93800AB7BAF /* Boolean+Boolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Boolean+Boolean.swift"; sourceTree = "<group>"; };
 		ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				163CED841BA3DDF60060FAAB /* AppDelegate.swift */,
-				16B4B0B11BA4229F004417C0 /* SignupViewController.swift */,
-				ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */,
-				ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */,
-				ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */,
-				16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */,
-				16B7C3D61BA4063900EC2A8F /* Message.swift */,
+				AB0B2CA81BA4D89000AB7BAF /* Controllers */,
+				AB0B2CA91BA4D89B00AB7BAF /* Handlers */,
 				163CED881BA3DDF60060FAAB /* Main.storyboard */,
 				163CED8B1BA3DDF60060FAAB /* Images.xcassets */,
 				163CED8D1BA3DDF60060FAAB /* LaunchScreen.xib */,
@@ -125,6 +125,28 @@
 				7D0E3D47408BA64771979E9C /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB0B2CA81BA4D89000AB7BAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16B4B0B11BA4229F004417C0 /* SignupViewController.swift */,
+				ABF35DF81BA4109A0029B9C2 /* LoginViewController.swift */,
+				ABF35DFA1BA410A00029B9C2 /* MessagesViewController.swift */,
+				ABF35DFC1BA410B20029B9C2 /* ServicesTableViewController.swift */,
+				16B4B0B51BA44487004417C0 /* AddServiceTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AB0B2CA91BA4D89B00AB7BAF /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				16B7C3D61BA4063900EC2A8F /* Message.swift */,
+				AB0B2CA61BA4D26300AB7BAF /* RequestHandler.swift */,
+				AB0B2CAA1BA4D93800AB7BAF /* Boolean+Boolean.swift */,
+			);
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 		E37E202FA02E99DDD7C0F538 /* Pods */ = {
@@ -248,7 +270,9 @@
 				ABF35DF91BA4109A0029B9C2 /* LoginViewController.swift in Sources */,
 				16B7C3D71BA4063900EC2A8F /* Message.swift in Sources */,
 				ABF35DFB1BA410A00029B9C2 /* MessagesViewController.swift in Sources */,
+				AB0B2CAB1BA4D93800AB7BAF /* Boolean+Boolean.swift in Sources */,
 				163CED851BA3DDF60060FAAB /* AppDelegate.swift in Sources */,
+				AB0B2CA71BA4D26300AB7BAF /* RequestHandler.swift in Sources */,
 				ABF35DFD1BA410B20029B9C2 /* ServicesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

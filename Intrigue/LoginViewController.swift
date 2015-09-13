@@ -39,30 +39,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(sender: AnyObject) {
-        let urlPath: String = "https://mhacks.on-aptible.com/api/auth/token"
-        var url: NSURL = NSURL(string: urlPath)!
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let urlPath: String = "/auth/token"
+        let stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)"
         
-        request.HTTPMethod = "POST"
-        var stringPost = "email=\(emailTextField!.text)&password=\(passwordTextField!.text)"
-
-        let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        request.timeoutInterval = 60
-        request.HTTPBody = data
-        request.HTTPShouldHandleCookies = false
-        
-        let queue: NSOperationQueue = NSOperationQueue()
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var err: NSError?
-//            println(NSString(data: data, encoding: NSUTF8StringEncoding))
-
-            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+        RequestHandler().sendRequest(urlPath, data: stringPost, postOrGet: false, completionHandler: { err, data in
+            var jsonResult: NSDictionary = data as! NSDictionary
             
             var success: AnyObject? = jsonResult.objectForKey("success")
-            if (err != nil || success?.stringValue == "0") {
-                
+            if (err) {
                 var alert = UIAlertController(title: "Alert", message: "Your email or password is incorrect!", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)

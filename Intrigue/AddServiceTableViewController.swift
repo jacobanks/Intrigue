@@ -22,26 +22,24 @@ class AddServiceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var url1: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/services")!
-        var request1: NSMutableURLRequest = NSMutableURLRequest(URL: url1)
         
-        NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-            var serviceInfoResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
+        let url: NSString = "/services"
+        
+        RequestHandler().sendRequest(url, data: nil, postOrGet: false, completionHandler: { err, data in
+            let serviceInfoResult: NSArray = data as! NSArray
             
             serviceList = serviceInfoResult
             
             let token: NSString = NSUserDefaults.standardUserDefaults().stringForKey("authToken")!
-            var url2: NSURL = NSURL(string: "https://mhacks.on-aptible.com/api/chats?token=\(token)")!
-            var request2: NSMutableURLRequest = NSMutableURLRequest(URL: url2)
             
-            NSURLConnection.sendAsynchronousRequest(request1, queue: NSOperationQueue.mainQueue()) {(response, data, error) in
-                var chatListResult: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSArray
+            RequestHandler().sendRequest("/chats?token=\(token)", data: nil, postOrGet: false, completionHandler: { err, data in
+                
+                var chatListResult: NSArray = data as! NSArray
                 
                 chatList = chatListResult
                 self.tableView.reloadData()
-            }
-        }
+            })
+        })
         
         self.title = "Add a Service"
         
